@@ -12,7 +12,20 @@
 			<name>SpringSource Repository</name>
 			<url>http://repo.springsource.org/release</url>
 		</repository>
+		<repository>
+			<id>project.local</id>
+			<name>project</name>
+			<url>file:${project.basedir}/repo</url>
+		</repository>		
 	</repositories>
+	
+	<pluginRepositories>
+		<pluginRepository>
+			<id>project.local</id>
+			<name>project</name>
+			<url>file:${project.basedir}/repo</url>
+		</pluginRepository>
+	</pluginRepositories>	
 
 	<dependencies>
 		<dependency>
@@ -80,6 +93,21 @@
 					</dependency>
 				</dependencies>
 			</plugin>
+			
+			<plugin>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>${project.build.directory}/lib</outputDirectory>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>			
 
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
