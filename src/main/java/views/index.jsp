@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Cruzeiras</title>
+	<title>Cruzeira</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet" media="screen">
@@ -51,7 +51,7 @@
      		It configures Spring programmatically using app-context.xml from resources directory. Creating a project
      		using cruzeira archetype will give you this structure:
      	</p>
-     	<p>
+     	<p class="text-center">
      		<img alt="project" src="<c:url value="/resources/base-project.png" />">
      	</p>
      	<p>
@@ -74,14 +74,14 @@
      		can use any Spring feature normally, in the Spring way, except the web views. To make things simple the
      		JSP files are in 'src/main/java/views'. 
      	</p>
-     	<p>
+     	<p class="text-center">
      		<img alt="project" src="<c:url value="/resources/views-jsp.png" />">
      	</p>
      	<p>
      		Then the jsp file will be compiled to a Java class in the first execution and Maven will compile this
      		generated Java class. At the end, you will have this:
      	</p>
-     	<p>
+     	<p class="text-center">
      		<img alt="project" src="<c:url value="/resources/views-jsp-compiled.png" />">
      	</p>
      	<p>
